@@ -9,7 +9,8 @@ script 的 src 属性既可以跨域也可以发送 ajax 请求，并且是同�
 
 <script src="/login/status"></script>
 <script>
-    if (!islogin) logcation.href = 'login.html'
+    var isLogin = true;
+    if (!isLogin) logcation.href = 'login.html'
 </script>
 
 <!DOCTYPE html>
@@ -35,7 +36,7 @@ script 的 src 属性既可以跨域也可以发送 ajax 请求，并且是同�
             <button class="btn btn-default navbar-btn fa fa-bars"></button>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="profile.html"><i class="fa fa-user"></i>个人中心</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out"></i>退出</a></li>
+                <li><a href="javascript:;" id="logout"><i class="fa fa-sign-out" ></i>退出</a></li>
             </ul>
         </nav>
         <div class="container-fluid">
@@ -105,6 +106,8 @@ script 的 src 属性既可以跨域也可以发送 ajax 请求，并且是同�
     <script>
         NProgress.done()
     </script>
+    <script src="../assets/js/common.js"></script>
+
 </body>
 
 </html>
